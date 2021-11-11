@@ -11,11 +11,20 @@ import SnapKit
 import Then
 
 class ViewController: UIViewController {
+    
+    var myImage = MyView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //접근하고자 하는 URL 정보
+        self.view.addSubview(myImage)
+        
+        myImage.snp.makeConstraints { make in
+            make.center.width.height.equalToSuperview()
+            
+        }
+        
+        /*//접근하고자 하는 URL 정보
         let URL = "https://honggun-blog.herokuapp.com/MAKE_CONTENTS"
         //전송할 파라미터 정보
         let PARAM:Parameters = [
@@ -37,7 +46,7 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
             }
-        }
+        }*/
 
 
     }
