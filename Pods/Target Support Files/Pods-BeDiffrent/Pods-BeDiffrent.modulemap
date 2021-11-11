@@ -1,0 +1,6 @@
+framework module Pods_BeDiffrent {
+  umbrella header "Pods-BeDiffrent-umbrella.h"
+
+  export *
+  module * { export * }
+}
